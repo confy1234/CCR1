@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Consorcio Central Regional </title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" />
+
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+	<link rel="stylesheet" href="css/all.min.css">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/carousel.css" rel="stylesheet">
+
+	
+	<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="all.min.css">
+
+</head>
+<body>
+
+
+<!-- Navigation navbar-expand-md navbar-light bg-light sticky-top-->
+<nav class = "navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+	<div class = "container-fluid">
+		<div class="logo" href="inicio"><img src="img/logoWebWhite.png"></div>
+		<button class = "navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class = "collapse navbar-collapse" id="navbarResponsive">
+			<ul class = "navbar-nav ml-auto">
+				<li class = "nav-item active">
+					<a class = "nav-link" href="#inicio">Inicio</a>
+				</li>
+				<li class = "nav-item">
+					<a class = "nav-link" href="#nosotros">Nosotros</a>
+				</li>
+				<li class = "nav-item">
+					<a class = "nav-link" href="#servicios">Servicios</a>
+				</li>
+				<li class = "nav-item">
+					<a class = "nav-link" href="#clientes">Clientes</a>
+				</li>
+				<li class = "nav-item">
+					<a class = "nav-link" href="#contacto">Contacto</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+ <div id="inicio" class="contador parallax">
+  </div>
+<!--- Image Slider -->
+
+<div id="slides" class="carousel slide" data-ride ="carousel">
+	<ol class = "carousel-indicators">
+		<li data-target ="#slides" data-slide-to = "0" class = "active"></li>
+		<li data-target ="#slides" data-slide-to = "1"></li>
+		<li data-target ="#slides" data-slide-to = "2"></li>
+	</ol>
+
+	<div class = "carousel-inner">
+		<div class="carousel-item active">
+			<img src="img/background.png">
+			<div class="carousel-caption">
+				<img src="img/logocortoglow.png" class= "img-fluid">
+			</div>
+		</div>
+		<div class="carousel-item ">
+			<img src="img/background2.png">
+		</div>
+		<div class="carousel-item ">
+			<img src="img/background3.png">
+		</div>
+	</div>
+</div>
+
+
+<!--- Jumbotron -->
+<div id="nosotros" class="contador parallax">
+</div>
+
+<div class="container-fluid edge--bottom ">
+<div class="row jumbotron edge--bottom">
+	<div class="container text-center edge--bottom">
+		<p class="lead">Construcción, Mantenimiento Industrial y Comercial </p>
+	</div>
+</div>
+</div>
+
+
+
+<!--- History Section -->
+
+<div class="container-fluid padding">
+	<div class="row titles text-center">
+		<div class="col-12">
+			<h1 class="display-4">¿Quiénes somos?</h1>
+		</div>
+		<hr>
+
+		<div id = "about" class="row text-center">
+          <div class="col-md-4">
+            <h4 class="service-heading">Empresa de Servicios</h4>
+            <p>Consorcio Central Regional es una empresa de servicios establecida
+			en 1990 en Monterrey,  N. L.,  a pocos kilómetros de la frontera
+			con Texas, USA.</p>
+          </div>
+          <div class="col-md-4">
+            <h4 class="service-heading">Nuestra Historia</h4>
+            <p>Al inicio de sus operaciones fue formada por dos
+			profesionistas con actividad empresarial iniciando con
+			construcciones y remodelaciones residenciales y
+			comerciales. Posteriormente en 1996 iniciamos el
+			servicio llave en mano en proyectos en la industria. 
+			Después en el año 2000 se agregó el servicio de mantenimiento a edificios.</p>
+          </div>
+          <div class="col-md-4">
+            <h4 class="service-heading">Nosotros te Apoyamos</h4>
+            <p>Contamos con personal para: proyectos y construcciones de naves industriales y comerciales, mantenimiento preventivo a naves industriales y edificios</p>
+          </div>
+        </div>
+
+
+
+
+		<!--<div class="col-12">
+			<p class="lead"><kbd>CCR</kbd> es una empresa de servicios establecida
+			en 1990 en Monterrey,  N. L.,  a pocos kilómetros de la frontera
+			con Texas, USA. </p>
+			
+			<p class="lead">Al inicio de sus operaciones fue formada por dos
+			profesionistas con actividad empresarial iniciando con
+			<kbd> construcciones y remodelaciones residenciales y
+			comerciales.  </kbd>Posteriormente en 1996 iniciamos el
+			<kbd> servicio llave en mano en proyectos en la industria. </kbd>
+			Después en el año 2000 se agregó el servicio de <kbd> mantenimiento a edificios. </kbd></p>
+			<p class="lead">Contamos con personal para: proyectos y construcciones de naves industriales y comerciales, mantenimiento preventivo a naves industriales y edificios .</p>
+		</div>-->
+	</div>
+</div>
+
+<!--- Three Column Section -->
+<div id = "factores" class="container-fluid padding edge--both--reverse">
+	<div class="row text-center ">
+		<div class = "col-xs-12 col-sm-6 col-md-4">
+			<i class="fas fa-suitcase"></i>
+			<h3>Experiencia</h3>
+			<p>20 años en el ámbito industrial y empresarial. </p>
+		</div>
+		<div class = "col-xs-12 col-sm-6 col-md-4">
+			<i class="fas fa-check"></i>
+			<h3>Cumplimiento</h3>
+			<p>En los programas de construcción y estándares de calidad. </p>
+		</div>
+		<div class = "col-sm-12 col-md-4">
+			<i class="fas fa-users"></i>
+			<h3>Personal</h3>
+			<p>Altamente capacitado y certificado en cada especialidad. </p>
+		</div>
+		<div class = "col-sm-6">
+			<i class="fas fa-sitemap"></i>
+			<h3>Estructura</h3>
+			<p>Filosofía organizacional. </p>
+		</div>
+		<div class = "col-sm-6">
+			<i class="fas fa-truck"></i>
+			<h3>Equipo</h3>
+			<p>Bodega, maquinaria y vehículos propios. </p>
+		</div>
+	</div>
+	<!--<hr class="my-4">-->
+</div>
+
+
+
+
+<!--- Fixed background -->
+
+
+<!--- Change on scroll -->
+<script>
+	window.onscroll = function() {myFunction()};
+
+	var navbar = document.getElementById("navbar");
+	var sticky = navbar.offsetTop;
+
+	function myFunction() {
+	  if (window.pageYOffset >= sticky) {
+	    navbar.classList.add("sticky")
+	  } else {
+	    navbar.classList.remove("sticky");
+	  }
+	}
+</script>
+
+<script>
+	$(window).scroll(function(){
+		$('nav').toggleClass('scrolled', $(this).scrollTop() > 400)
+	});
+</script>
+
+
+  
+<!--- Proyectos  -->
+
+<div id="servicios" class="contador parallax">
+ </div>
+
+<div class="container-fluid">
+	<div class="row titles text-center">
+		<div class="col-12 titulos">
+			<h1 class="display-4"> Servicios </h1>
+		</div>
+		<hr>
+	</div>
+</div>
+
+<!--- Cards -->
+
+<div class="container-fluid ">
+	<div class="row padding">
+		<div class="col-md-3">
+			<div class="card">
+				<a href="#"><img class="card-img-top" src="img/team3.png"></a>
+				<div class="card-body">
+					<h4 class="card-title">Mantenimiento Preventivo</h4>
+					<p class="card-text">Someine is an expert in with i dont know how many years of experience in the field.</p>
+					<a href="#" class="btn btn-outline-secondary">Más...</a>
+				</div>
+			</div>
+		</div>	
+		<div class="col-md-3">
+			<div class="card">
+				<a href="#"><img class="card-img-top" src="img/team3.png"></a>
+				<div class="card-body">
+					<h4 class="card-title">Electromecánico</h4>
+					<p class="card-text">Someine is an expert in with i dont know how many years of experience in the field.</p>
+					<a href="#" class="btn btn-outline-secondary">Más...</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-3">
+			<div class="card">
+				<a href="#"><img class="card-img-top" src="img/team3.png"></a>
+				<div class="card-body">
+					<h4 class="card-title">Obra civil</h4>
+					<p class="card-text">Someine is an expert in with i dont know how many years of experience in the field.</p>
+					<a href="#" class="btn btn-outline-secondary">Más...</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="card">
+				<a href="#"><img class="card-img-top" src="img/team3.png"></a>
+				<div class="card-body">
+					<h4 class="card-title">Instalación de Maquinaria</h4>
+					<p class="card-text">Someine is an expert in with i dont know how many years of experience in the field.</p>
+					<a href="#" class="btn btn-outline-secondary">Más...</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+
+<!--- Two Column Section --><!--
+<div class="container-fluid padding">
+	<div class="row padding">
+		<div class="col-lg-6">
+			<h2>Un poco más de info por aquí....</h2>
+			<p>Hello jujuju algo interesante por aqui shalalala hello guten tag aqui info chida de lo que sea</p>
+			<p>Hello jujuju algo interesante por aqui shalalala hello guten tag aqui info chida de lo que sea</p>
+			<p>Hello jujuju algo interesante por aqui shalalala hello guten tag aqui info chida de lo que sea</p>
+			<br>
+			<a href="#" class="btn btn-primary">Learn More</a>
+		</div>
+		<div class="col-lg-6">
+			<img src="img/desk.png" class="img-fluid">
+		</div>
+	</div>
+</div>
+
+<hr class="my-4">
+
+
+
+<div class="container-fluid padding">
+	<div class="row padding">
+		<div class="col-lg-6">
+			<h2>Our Philosophy o algo asi cool</h2>
+			<p>Hello jujuju algo interesante por aqui shalalala hello guten tag aqui info chida de lo que sea blablabal Hello jujuju algo interesante por aqui shalalala hello guten tag aqui info chida de lo que sea Hello jujuju algo interesante </p>
+			<p>Hello jujuju algo interesante por aqui shalalala hello guten tag aqui info chida de lo que sea Hello jujuju algo interesante por aqui shalalala hello guten tag aqui info chida de lo que sea Hello jujuju algo interesante por aqui shalalala hello guten tag aqui info chida de lo que sea Hello jujuju algo interesante por aqui shalalala hello guten tag aqui info chida de lo que sea Hello jujuju algo interesante por aqui shalalala hello guten tag aqui info chida de lo que sea</p>
+			<br>
+		</div>
+		<div class="col-lg-6">
+			<img src="img/bootstrap2.png" class="img-fluid">
+		</div>
+	</div>
+</div>
+
+<hr class="my-4">
+
+Connect 
+<div class="container-fluid padding">
+	<div class="row text-center padding">
+		<div class="col-12">
+			<h2>Connect</h2>
+		</div>
+		<div class="col-12 social padding">
+			<a href="#"><i class="fab fa-facebook"></i></a>
+			<a href="#"><i class="fab fa-twitter"></i></a>
+			<a href="#"><i class="fab fa-google-plus-g"></i></a>
+			<a href="#"><i class="fab fa-instagram"></i></a>
+			<a href="#"><i class="fab fa-youtube"></i></a>
+		</div>
+	</div>
+	
+</div> -->
+
+<!--Clientes-->
+
+<div id="clientes" class="contador parallax">
+ </div>
+
+<div class="row titles text-center">
+	<div class="col-12 titulosclientes">
+		<h1 class="display-4">Nuestros Clientes</h1>
+	</div>
+	<hr>
+</div>
+
+
+<script type="text/javascript" src= js/carousel.js></script>
+    
+<div class="container clientes">
+  <section class="customer-logos slider">
+    <div class="slide"><img src="img/airliquide.jpg"></div>
+    <div class="slide"><img src="img/amcor.png"></div>
+    <div class="slide"><img src="img/enersyslogo.png"></div>
+    <div class="slide"><img src="img/lth.jpg"></div>
+    <div class="slide"><img src="img/graforegia.jpg"></div>
+    <div class="slide"><img src="img/wrigley.jpg"></div>
+    <div class="slide"><img src="img/sealeadair.jpg"></div>
+  </section>
+</div>
+
+
+<!--- Footer -->
+<footer>
+
+<div id="contacto" class="contador parallax">
+    <div class="container-fluid">
+		<div class="row titles text-center">
+			<div class="col-12 titulos">
+				<h1 class="display-4"> Contacto </h1>
+			</div>
+			<hr>
+		</div>
+	</div>
+</div>
+
+	<div class="container-fluid padding">
+		<div class="row text-center">
+			<div class="col-md-4">
+				<hr class="light">
+				<h5>Información de Contacto </h5>
+				<hr class="light">
+				<p>Tel.(52) 81- 83-31-41-99 (98)</p>
+				<p>consorcioccr@prodigy.net.mx</p>
+				<p>Francisco S. Carvajal #1113</p>
+				<p>Col. Niño Artillero, Monterrey, N.L.</p>
+			</div>
+			<div class="col-md-4">
+				<hr class="light">
+				<h5>Horas de Servicio</h5>
+				<hr class="light">
+				<p>Lunes-Viernes: 8am - 5pm</p>
+				<p>Sábado: 10am - 4pm</p>
+				<p>Domingo: cerrado</p>
+			</div>
+			<div class="col-md-4 contactfix">
+				<hr class="light">
+				<h5>Contáctanos</h5>
+				<hr class="light">
+				<div class="informacion-usuario">
+					<input placeholder="Nombre" type="text" name="nombre"/>
+				</div>
+				<div class="informacion-usuario">
+					<input placeholder="Email" type="email" name="email" />
+				</div>
+		      	<div class="mensaje-usuario">
+		       		<textarea placeholder="Mensaje" type="text" name="mensaje"></textarea>      
+		      	</div>
+      			<button type="submit" class="button">Enviar</a>
+    		</div>
+			
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3594.711465355875!2d-100.3275523848185!3d25.71397558365852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866295b668fcb5a9%3A0xd70e8b57ba354719!2sFrancisco+S.+Carvajal+1113%2C+Ni%C3%B1o+Artillero%2C+64280+Monterrey%2C+N.L.%2C+M%C3%A9xico!5e0!3m2!1ses-419!2ssa!4v1555119944454!5m2!1ses-419!2ssa" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+			<div class="col-12">
+				<hr class="light-100">
+				<h5> &copy; Copyright 2018  |  ccrservicios.com </h5>
+			</div>
+
+		</div>
+	</div>
+</footer>
+
+
+
+
+
+
+
+<!-- Hover effect cards-->
+<script>
+    $(document).ready(function(){
+
+        $('.col-4-lg').hover(
+            // trigger when mouse hover
+            function(){
+                $(this).animate({
+                    marginTop: "-=1%",
+                },200);
+            },
+
+            // trigger when mouse out
+            function(){
+                $(this).animate({
+                    marginTop: "0%"
+                },200);
+            }
+        );
+    });
+</script>
+
+<script src="js/vendor/modernizr-3.6.0.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.lettering.js"></script>
+  <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

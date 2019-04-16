@@ -1,0 +1,1049 @@
+/*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+html {
+    box-sizing: border-box;
+}
+
+*,*:before,*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #f2f2f2;
+    margin: 0;
+}
+/** Globales **/
+.contenedor {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.seccion {
+    padding: 30px 0;
+}
+
+.seccion p {
+    font-size: 1.4em;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h2:after {
+    content: '';
+    margin: 0 auto;
+    background-image: url("../img/separador1.png");
+    height: 30px;
+    width: 100px;
+    background-size: cover;
+    display: block;
+}
+
+h3 {
+    font-size: 1.8em;
+    color: #ff4b21;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.button {
+    background-color: #ff4b21;
+    padding: 10px 40px;
+    color: #ffda0f;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin-top: 20px;
+    display: inline-block;
+    transition: all .6s ease;
+    border: 2px solid #ff4b21;
+}
+
+.button:hover {
+    background-color: #e33000;
+}
+
+.button.hollow,
+.button.hollow:hover {
+    background-color: #ffda0f;
+    color: #ff4b21;
+    border: 1px solid;
+}
+
+.button.transparente {
+    background-color: transparent;
+    border: 2px solid #ffda0f;
+}
+
+.button.transparente:hover {
+    border: 2px solid #ff4b21;
+    background-color: #ff4b21;
+}
+
+
+
+.float-right {
+    float: right;
+}
+
+@media only screen and (min-width:480px) {
+    .contenedor {
+        width: 95%;
+    }
+}
+
+@media only screen and (min-width:768px) {
+    .contenedor {
+        width: 90%;
+    }
+}
+@media only screen and (min-width:992px) {
+    .contenedor {
+        width: 90%;
+        max-width: 1100px;
+    }
+}
+
+/** Lettering **/
+h1.nombre-sitio span {
+    position: relative;
+    text-shadow: 0 0 60px black;
+}
+
+/** Header **/
+div.hero {
+    background-image: url(../img/bg-hero.jpg);
+    height: 100vh;
+    background-position: top center;
+    background-size: cover;
+}
+
+div.contenido-header {
+    padding-top: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+    div.contenido-header {
+        padding-top: 10px;
+    }
+}
+
+nav.redes-sociales {
+    text-align: center;
+    background-color: rgba(0,0,0,.3);
+}
+
+nav.redes-sociales a {
+    color: #ffffff;
+    font-size: 2.5em;
+    margin-right: 20px;
+}
+
+
+nav.redes-sociales a:last-child{
+    margin-right: 0;
+}
+
+/** Nuestra historia **/
+div.nuestra-historia p img {
+    max-width: 100%;
+}
+
+div.nuestra-historia p {
+    padding: 20px;
+    margin: 0;
+    width: 100%;
+    float: left;
+    margin: auto;
+}
+
+div.nuestra-historia {
+    padding: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+    div.nuestra-historia p {
+        width: 50%;
+    }
+
+    div.nuestra-historia {
+        display: flex;
+    }
+}
+
+div.nombre-pancho {
+    text-align: center;
+    color: #ffda0f;
+    margin-top: 150px;
+}
+
+@media only screen and (min-width: 768px) {
+    div.nombre-pancho {
+        width: 70%;
+        margin: auto;
+        margin-top: 250px;
+    }
+}
+div.nombre-pancho p {
+    margin: 0;
+    display: inline;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+div.nombre-pancho p.slogan {
+    font-weight: bold;
+    color: #ff4b21;
+    font-size: 2em;
+}
+
+
+p.slogan {
+    text-transform: none!important;
+}
+
+h1.nombre-sitio {
+    font-size: 5.9vw;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+    h1.nombre-sitio {
+        font-size: 7vw;
+        margin: 0;
+    }
+}
+
+/** Barra **/
+.barra {
+    background-color: #303030;
+    padding: 20px 0;
+}
+
+.fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+
+div.logo {
+    width: 80%;
+    float: left;
+}
+
+div.logo img {
+    height: 60px;
+    display: block;
+    padding-left: 10px;
+   /* margin: auto;*/
+}
+
+@media only screen and (min-width: 768px) {
+    div.logo {
+        width: 33%;
+    }
+}
+
+/** Nav principal **/
+nav.navegacion-principal {
+    display: none;
+    width: 100%;
+}
+
+nav.navegacion-principal a {
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all .5s ease;
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+nav.navegacion-principal a:hover {
+    background-color: #ff4b21;
+}
+
+@media only screen and (min-width: 768px) {
+    nav.navegacion-principal {
+        width: 67%;
+        float: right;
+        text-align: right;
+        display: block;
+    }
+
+    nav.navegacion-principal a {
+        padding: 10px 10px;
+        display: inline-block;
+        width: auto;
+        text-align: center;
+        margin-bottom: 0;
+    }
+}
+
+/** Menu Movil **/
+div.menu-movil {
+    width: 60px;
+    display: block;
+    float: right;
+    text-align: right;
+    margin-top: 12px;
+}
+
+div.menu-movil:hover {
+    cursor: pointer;
+}
+
+div.menu-movil span {
+    height: 8px;
+    margin-bottom: 6px;
+    background-color: white;
+    display: block;
+}
+
+@media only screen and (min-width: 768px) {
+    div.menu-movil {
+        display: none;
+    }
+}
+
+/** Programa del evento **/
+section.programa {
+    position: relative;
+}
+
+div.contenedor-video {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+video.panchoVideo {
+    min-width: 100%; 
+}
+
+div.contenido-programa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+div.programa-evento {
+    background-color: rgba(255,255,255,.8);
+    padding: 15px;
+    margin-top: 75px;
+}
+
+@media only screen and (min-width: 768px) {
+    div.programa-evento {
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    div.programa-evento {
+        width: 50%;
+    }
+}
+
+
+nav.menu-comidas {
+    width: 100%;
+    border-bottom: 1px solid #ff4b21;
+}
+
+nav.menu-comidas a {
+    display: block;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+    position: relative;
+}
+
+nav.menu-comidas a.activo {
+    font-weight: bold;
+    color: #ff4b21;
+}
+
+@media only screen and (min-width: 768px) {
+    nav.menu-comidas {
+        display: table;
+        table-layout: fixed;
+    }
+    nav.menu-comidas a {
+        display: table-cell;
+        transition: all 0.7s ease;
+    }
+    nav.menu-comidas a:hover {
+        background-color: #ff4b21;
+        color: #ffffff;
+    }
+}
+
+
+div.detalle-evento p i {
+    color: #ff4b21;
+    margin-right: 10px;
+}
+
+/** Detalle evento **/
+div.detalle-evento {
+    border-top: 1px solid #ff4b21;
+    padding: 0 20px;
+}
+
+div.detalle-evento h3 {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+ul.ocultar {
+    display: none;
+}
+/*
+div.detalle-evento:nth-child(2) {
+    border: none;
+}
+*/
+div.detalle-evento p {
+    margin: 20px 0;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+/** comida **/
+ul.lista-comida li {
+    padding: 10px;
+    float: left;
+}
+
+@media only screen and (min-width: 480px) {
+    ul.lista-comida li {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    ul.lista-comida li {
+        width: 33.3%;
+    }
+}
+
+div.comida {
+    position: relative;
+    overflow: hidden;
+}
+
+div.comida img {
+    max-width: 100%;
+    transition: all .5s ease-in-out;
+}
+
+div.comida:hover img{
+    transform: scale(1.2);
+}
+
+div.comida p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 10px 10px;
+    background-color: rgba(0,0,0,.55);
+    width: 100%;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+    text-transform: uppercase;
+    transition: all .5s ease-in-out;
+}
+
+div.comida:hover p{
+    bottom: -80px;
+    opacity: 0;
+}
+
+/** Contador **/
+.parallax::before {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center center;
+    background-attachment: fixed;
+    filter: brightness(.8)
+}
+
+div.contador {
+    position: relative;
+    height: auto;
+}
+
+div.contador::before {
+    content: '';
+    background-image: url(../img/bg-pancho.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+h2.titulo-seccion {
+    position: relative;
+    padding: 50px 0;
+    text-align: center;
+    color: white;
+    font-size: 4em;
+    margin: 0;
+}
+
+@media only screen and (min-width:768px) {
+    ul.resumen-evento li {
+        width: 25%;
+    }
+}
+
+p.numero {
+    color: #ff4b21;
+    font-size: 4em;
+    display: block;
+    margin: 0 0 10px 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/** Tabla precios **/
+ul.lista-precios > li{
+    padding: 10px;
+}
+
+@media only screen and (min-width:768px) {
+    ul.lista-precios > li{
+        float: left;
+        width: 33.3%;
+    } 
+}
+
+div.tabla-precio {
+    border: 1px solid #e1e1e1;
+    background-color: white;
+    padding: 40px 0;
+    text-align: center;
+    transition: all .5s ease;
+}
+
+@media only screen and (min-width:768px) {
+    div.tabla-precio a {
+        display: none;
+    }
+}
+
+div.tabla-precio:hover {
+    transform: scale(1.1);
+    border: 1px solid #ff4b21;
+    box-shadow: 0px 0px 50px #666;
+}
+
+div.tabla-precio ul li {
+   font-family: 'Raleway', sans-serif;
+   font-size: 14px;
+   margin-bottom: 20px;
+   text-transform: uppercase;
+   color: #868686;
+   line-height: 26px; 
+}
+
+#restriccion::before {
+    content: ''
+}
+
+#restriccion {
+    font-style: italic;
+    font-size: 12px;
+    margin: 0;
+}
+div.tabla-precio ul li::before {
+    font-family: 'font awesome 5 free';
+    font-weight: 900;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 5px;
+    font-size: 20px;
+    color: #ffda0f;
+    -webkit-font-smoothing: antialiased;
+    content: '\f105';
+ }
+div.tabla-precio h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3em;
+    text-transform: uppercase;
+}
+
+div.tabla-precio p.numero {
+    color: black;
+    margin: 20px 0;
+}
+
+/** Mapa **/
+div.mapa {
+    height: 420px;
+    z-index: 1;  
+}
+
+/** Pedido apps **/
+div.pedidoApps {
+    position: relative;
+    height: auto;
+}
+
+div.pedidoApps:before {
+    background-image: url(../img/panchoPedir.png);
+    content: '';
+}
+
+div.pedidoApps .contenido {
+    padding: 100px 0;
+    color: black;
+    font-size: 1.6em;
+    text-align: center;
+    position: relative; 
+}
+
+div.pedidoApps .contenido p {
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+div.pedidoApps .contenido h3 {
+    color: black;
+    text-transform: uppercase;
+    font-size: 7vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;  
+}
+
+a.aplicaciones img{
+    width: 200px;
+    margin: 0 40px;
+}
+
+/** Cotiza tu evento **/
+div.form-usuario {
+    width: 70%;
+    overflow: hidden;
+}
+
+div.form-usuario a {
+    float: right;
+}
+
+div.tipoMensaje {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+div.informacion-usuario {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+div.informacion-usuario > input {
+    padding: 5px 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    width: 47%;
+}
+
+div.mensaje-usuario {
+    height: 270px;
+    margin-top: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+div.mensaje-usuario::before {
+    content: '';
+    position: absolute;
+    background-image: url("../img/logoPancho.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    right: 12px;
+    top: 12px;
+    z-index: -99;
+    width: 250px;
+    height: 250px;
+}
+
+div.mensaje-usuario > textarea {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    background: rgba(255,255,255,.8);
+    resize: none;
+}
+/** footer **/
+footer {
+    background-color: #353535;
+    padding-top: 40px;
+}
+
+footer .contenedor > div {
+    color: white;
+    padding: 0 20px;
+    font-size: 1em;
+}
+
+@media only screen and (min-width:768px) {
+    footer .contenedor > div {
+        width: 33.3%;
+        float: left;
+    }
+}
+
+footer h3 {
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 20px;
+}
+
+footer h3 span {
+    color: #ff4b21;
+}
+
+footer .ultimos-tweets li {
+    margin-bottom: 15px;
+}
+
+footer .nav.redes-sociales {
+    text-align: right;
+}
+
+p.copyright {
+    background-color: #2e2e2e;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin: 20px 0 0 0;
+}
+
+/* Color box */
+div.cboxElement {
+    text-align: center;
+    margin: 0 15px;
+}
+
+div.preciosCombo {
+    font-weight: bold;
+}
+
+div.comidaInfo h2 {
+    font-size: 1.4em;
+}
+
+div.comidaInfo {
+    font-size: 1.2em;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster */
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
