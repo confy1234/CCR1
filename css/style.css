@@ -530,6 +530,10 @@ div.contactfix{
     padding: 2rem;
   }
 
+  body {
+    overflow-x:hidden;
+  }
+
 
 }
 @media (max-width: 768px) {
@@ -572,6 +576,9 @@ div.contactfix{
     margin-top: 5.7rem;
   }
 
+  body {
+    overflow-x:hidden;
+  }
 
 }
 @media (max-width: 576px) {
@@ -620,6 +627,9 @@ div.contactfix{
     position: relative;
     width: 100%;
     margin-top: 5.7rem;
+  }
+  body {
+    overflow-x:hidden;
   }
 
 }

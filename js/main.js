@@ -1,16 +1,4 @@
-(function() {
-    'use scrit';
-    document.addEventListener("DOMContentLoaded", function() {
-        var map = L.map('mapa').setView([25.677221, -100.354385], 15);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
 
-        L.marker([25.677221, -100.354385]).addTo(map)
-            .bindPopup('Pancho Birotes')
-            .openPopup();
-    }) // DOM Content Loaded
-})();
 
 $(function() {
     
@@ -42,18 +30,6 @@ $(function() {
         $('.navegacion-principal').css({display : 'inline-block'});
     })
 
-    // Menu comida
-    $('section.comidas ul:first').show();
-    $('section.comidas a:first').addClass('activo');
-    $('section.comidas a.estiloComida').on('click', function() {
-        $('section.comidas a.estiloComida').removeClass('activo');
-        $(this).addClass('activo');
-        $('.ocultar').hide();
-        var enlace = $(this).attr('href');
-        $(enlace).fadeIn(1000);
-        return false;
-    });
-
     // Mail to option
     $('.form-usuario a').on('click', function() {
         var link = "mailto:panchobirotes1@gmail.com"
@@ -62,13 +38,6 @@ $(function() {
         window.location.href = link;
     });
 
-
-    // Colorbox
-    if (window.mobilecheck()) {
-        $('.comidaInfo').colorbox({inline:true, width:"80%"});
-    } else {
-        $('.comidaInfo').colorbox({inline:true, width:"45%"});
-    }
 
     // Allows the page to be automatically scrolled to the appropriate section when the user clicks
     // the corresponding button in the navigation bar.
