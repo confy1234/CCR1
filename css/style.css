@@ -5,7 +5,20 @@
 /* ==========================================================================
  Eliminate unwanted screen space
  ========================================================================== */
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
 
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
 
 body {
   overflow-x:hidden;
@@ -135,7 +148,6 @@ hr.light-100{
 .nav-link{
   font-size: 1.2rem !important;
   font-style: bold;
-
 }
 
 .bg-dark{
@@ -202,7 +214,7 @@ div.logo.scrolled img {
   width: 50%; 
   height: 160%;
   position: center;
-  transform: translateY(-25%); 
+  transform: translateY(-30%); 
 }
 
 .carousel-caption h1 {
@@ -279,6 +291,33 @@ h2.titulo-seccion {
 }
 
 
+/* ==========================================================================
+ Video
+ ========================================================================== */
+
+/** Programa del evento **/
+section.programa {
+    position: relative;
+}
+
+div.contenedor-video {
+    width:100%;
+    overflow-x: hidden;
+}
+
+video.ccrVideo {
+    min-width: 100%;
+    max-width:110%; 
+}
+
+div.contenido-programa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
 
 /* ==========================================================================
  Bellow carousel message
@@ -332,63 +371,9 @@ h2.titulo-seccion {
  Clients 
  ========================================================================== */
 
-
-/* =========== =========== =========== =========== =========== =========== =========== =========== =========== == */
-
-
-
-
-div.clientlogo img {
-    height: 60px;
-    padding: 10px;
-    margin-top: 30px;
-    margin-bottom: : 30px;
-    margin-left: 0px;
-    display: block;
+section.clienteslogos{
+  margin-bottom: 100px;
 }
-
-div.clientlogoair img {
-    height: 70px;
-    padding: 10px;
-    margin-left: 70px;
-    display: block;
-}
-
-div.clientlogolth img {
-    height: 70px;
-    padding: 10px;
-    display: block;
-}
-
-div.clientlogoamcor img {
-    height: 60px;
-    padding: 10px;
-    margin: 30px;
-    margin-left: 70px;
-    display: block;
-}
-
-div.clientlogografo img {
-    height: 100px;
-    padding: 10px;
-    margin-top: 10px;
-    display: block;
-}
-
-div.clientlogoenersys img {
-    height: 100px;
-    padding: 10px;
-    margin-left: 200px;
-    display: block;
-}
-div.clientlogolth img {
-    height: 90px;
-    padding: 10px;
-    display: block;
-}
-
-
-
 
 
 /* ==========================================================================
@@ -522,7 +507,7 @@ div.contactfix{
 @media (max-width: 992px) {
 
 .carousel-caption{
-    top: 45%;
+    top: 50%;
   }
 
   .social a {
@@ -534,24 +519,24 @@ div.contactfix{
     overflow-x:hidden;
   }
 
-
 }
 @media (max-width: 768px) {
   
-  .carousel-caption{
-    top: 50%;
-  }
 
-  .carousel-caption h1 {
-    font-size: 350%; 
-  }
+  .navbar-nav li {
+  padding-right: 20px;
+  border-color: #FFF;
+}
 
-  .carousel-caption h3 {
-    font-size: 140%;
-    font-weight: 400; 
-    padding-bottom: .2rem
-  }
+.nav-link{
+  font-size: .9rem !important;
+  font-style: bold;
+}
 
+
+  body {
+    overflow-x:hidden;
+  }
   .carousel-caption .btn{
     font-size: 95%; 
     padding: 8px 14px;
@@ -570,30 +555,32 @@ div.contactfix{
   background: #191919 !important;
   border-color: #FFF;
   }
-   .carousel-inner img{
-    position: relative;
-    width: 100%;
-    margin-top: 5.7rem;
+
+  video.ccrVideo {
+      min-width: 100%;
+      max-width: 130%; 
   }
 
-  body {
-    overflow-x:hidden;
+   .carousel-inner img{
+    position: ;
+    width: 50%;
+    transform: translateY(100%) !important; 
+    
   }
+
+  div.logo img {
+    height: 80px;
+    display: block;
+    margin-left: -30px;
+    margin-top: -13px;
+    margin-bottom:-13.12px;
+}
+
 
 }
 @media (max-width: 576px) {
   
-  .carousel-caption{
-    top: 55%;
-  }
 
-  .carousel-caption h1 {
-    font-size: 250%; 
-  }
-
-  .carousel-caption h3 {
-    font-size: 110%;
-  }
 
   .carousel-caption .btn{
     display:none;
@@ -603,16 +590,25 @@ div.contactfix{
     display: none;
   }
 
+
+  div.logo img {
+    height: 80px;
+    display: block;
+    margin-left: -20px;
+    margin-top: -13px;
+    margin-bottom:-13.12px;
+  }
+
    .display-4{
     font-size: 160%;
   } 
 
-  .social a {
-    font-size: 2em; 
-    padding: .7rem;
+
+  video.ccrVideo {
+      min-width: 100%;
+      max-width: 150%; 
   }
-
-
+  
   .jumbotron p {
     font-size: 20px; 
   }
@@ -620,17 +616,31 @@ div.contactfix{
   .bg-dark{
   transition: 750ms ease;
   background: #191919 !important;
-  border-color: #FFF;
+  border-color: #ffffff;
   }
   
-  .carousel-inner img{
-    position: relative;
-    width: 100%;
-    margin-top: 5.7rem;
+  div.contenedor-video {
+      width:100%;
+      overflow-x: hidden;
   }
+
+
+  .carousel-inner img {
+    display: none !important;
+    position: relative;
+    width: 50%; 
+    height: 20%;
+    margin: 20px;
+    } 
+
   body {
     overflow-x:hidden;
   }
+
+  .carousel-caption{
+    display: none;
+  }
+
 
 }
 
