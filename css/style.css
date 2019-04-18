@@ -193,6 +193,7 @@ hr.light-100{
   background-color: #27397c;
   background: #27397c;
   border-color: #FFF;
+  width: screen;
   
 }
 
@@ -477,86 +478,6 @@ div.contactfix{
 }
 
 
-
-/* --------- SLANTED---------*/
-/*.edge--both--reverse:before {
-  top: 0;
-  -webkit-transform: skewY(-1.5deg);
-          transform: skewY(-1.5deg);
-  -webkit-transform-origin: 0 0;
-          transform-origin: 0 0;
-}
-.edge--both--reverse:after {
-  bottom: 0;
-  -webkit-transform: skewY(1.5deg);
-          transform: skewY(1.5deg);
-  -webkit-transform-origin: 0 0;
-          transform-origin: 0 0;
-}
-
-.edge--both--reverse {
-  position: relative;
-  z-index: 1;
-}
-.edge--both--reverse:before, .edge--both--reverse:after {
-  background: inherit;
-  content: '';
-  display: block;
-  height: 50%;
-  left: 0;
-  position: absolute;
-  right: 0;
-  z-index: -1;
-  -webkit-backface-visibility: hidden;
-}
-
-.edge--bottom {
-  position: relative;
-  z-index: 1;
-}
-.edge--bottom:after {
-  background: inherit;
-  content: '';
-  display: block;
-  height: 50%;
-  left: 0;
-  position: absolute;
-  right: 0;
-  z-index: -1;
-  -webkit-backface-visibility: hidden;
-}
-.edge--bottom:after {
-  bottom: 0;
-  -webkit-transform: skewY(-1.5deg);
-          transform: skewY(-1.5deg);
-  -webkit-transform-origin: 100%;
-          transform-origin: 100%;
-}
-
-.edge--bottom--reverse {
-  position: relative;
-  z-index: 1;
-}
-.edge--bottom--reverse:after {
-  background: inherit;
-  content: '';
-  display: block;
-  height: 50%;
-  left: 0;
-  position: absolute;
-  right: 0;
-  z-index: -1;
-  -webkit-backface-visibility: hidden;
-}
-.edge--bottom--reverse:after {
-  bottom: 0;
-  -webkit-transform: skewY(1.5deg);
-          transform: skewY(1.5deg);
-  -webkit-transform-origin: 0 100%;
-          transform-origin: 0 100%;
-}*/
-
-
 /* ==========================================================================
  Media Queries
  ========================================================================== */
@@ -570,11 +491,9 @@ div.contactfix{
     font-size: 4em; 
     padding: 2rem;
   }
-
-  body,html {
-    overflow-x:hidden !important;
+html{
+    overflow-x: auto;
   }
-
 
 }
 
@@ -589,11 +508,9 @@ div.contactfix{
     font-size: 4em; 
     padding: 2rem;
   }
-
-  body,html {
-    overflow-x:hidden !important;
+  html{
+    overflow-x: auto;
   }
-
 
 }
 @media (max-width: 768px) {
@@ -608,11 +525,6 @@ div.contactfix{
   font-size: .9rem !important;
   font-style: bold;
 }
-
-
-  body {
-    overflow-x:hidden !important;
-  }
 
   .carousel-caption .btn{
     font-size: 95%; 
@@ -653,10 +565,17 @@ div.contactfix{
     margin-bottom:-13.12px;
 }
 
+html{
+    overflow-x: auto;
+  }
 
 }
 @media (max-width: 576px) {
   
+
+  html{
+    overflow-x: auto;
+  }
 
   .carousel-caption .btn{
     display:none;
@@ -712,7 +631,6 @@ div.contactfix{
   .carousel-caption{
     display: none;
   }
-
 
 }
 

@@ -27,9 +27,8 @@
 </head>
 <body>
 
-
 <!-- Navigation navbar-expand-md navbar-light bg-light sticky-top-->
-<nav class = "navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+<nav class = "navbar navbar-expand-md navbar-dark bg-dark fixed-top navbar-collapse">
 	<div class = "container-fluid">
 		<div class="logo" ><img src="img/logoWebWhite.png"></div>
 		<button class = "navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
@@ -482,7 +481,26 @@ Connect
 
 
 
-<script>
+
+
+<script type="text/javascript">
+	var offset = 300,
+scroll_top_duration = 700,
+$back_to_top = $('.top');
+
+// Smooth scroll to top
+$back_to_top.on('click', function(event) {
+  event.preventDefault();
+  alert();
+  $('body,html').animate(
+{scrollTop: 0, }, 
+scroll_top_duration
+  );
+})
+</script>
+
+
+<!--<script>
 $(document).ready(function(){
   // Add smooth scrolling to all links
   $("a").on('click', function(event) {
@@ -507,6 +525,28 @@ $(document).ready(function(){
     } // End if
   });
 });
+</script>-->
+
+<!--- Change on scroll -->
+<script>
+	window.onscroll = function() {myFunction()};
+
+	var navbar = document.getElementById("navbar");
+	var sticky = navbar.offsetTop;
+
+	function myFunction() {
+	  if (window.pageYOffset >= sticky) {
+	    navbar.classList.add("sticky")
+	  } else {
+	    navbar.classList.remove("sticky");
+	  }
+	}
+</script>
+
+<script>
+	$(window).scroll(function(){
+		$('nav').toggleClass('scrolled', $(this).scrollTop() > 400)
+	});
 </script>
 
 
