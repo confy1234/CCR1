@@ -29,7 +29,7 @@ div.contador {
 
 div.contador::before {
     content: '';
-    background-image: url(../img/fix.jpg);
+    background-image: url(../img/fix3.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
