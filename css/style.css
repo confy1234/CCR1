@@ -83,6 +83,10 @@ html{
    -webkit-overflow-scrolling: touch;
 }
 
+div.hiddenvideo {
+  display: none;
+}
+
 
 /* ==========================================================================
  Remove defalut fieldset styles
