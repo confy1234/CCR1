@@ -31,7 +31,7 @@
 <!-- Navigation navbar-expand-md navbar-light bg-light sticky-top-->
 <nav class = "navbar navbar-expand-md navbar-dark bg-dark fixed-top">
 	<div class = "container-fluid">
-		<div class="logo" href="inicio"><img src="img/logoWebWhite.png"></div>
+		<div class="logo" ><img src="img/logoWebWhite.png"></div>
 		<button class = "navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -226,11 +226,6 @@
 	}
 </script>-->
 
-<script>
-	$(window).scroll(function(){
-		$('nav').toggleClass('scrolled', $(this).scrollTop() > 400)
-	});
-</script>
 
 
   
@@ -254,7 +249,7 @@
 	<div class="row padding">
 		<div class="col-md-3">
 			<div class="card">
-				<a href="#"><img class="card-img-top" src="img/preventivo.jpg"></a>
+				<img class="card-img-top" src="img/preventivo.jpg">
 				<div class="card-body">
 					<h5 class="card-title">Mantenimiento Preventivo</h5>
 					<p class="card-text">Brigadas para mantenimiento a edificios, trabajos de pintura general, plomería, albañería, electricidad, iluminación, etc. </p>
@@ -264,7 +259,7 @@
 		</div>	
 		<div class="col-md-3">
 			<div class="card">
-				<a href="#"><img class="card-img-top" src="img/electromecanico.jpg"></a>
+				<img class="card-img-top" src="img/electromecanico.jpg">
 				<div class="card-body">
 					<h4 class="card-title">Electromecánico</h4>
 					<p class="card-text">Fabricación y montaje de estructura metálica. Diseño y construcción de naves industriales.</p>
@@ -275,7 +270,7 @@
 
 		<div class="col-md-3">
 			<div class="card">
-				<a href="#"><img class="card-img-top" src="img/obracivil.jpg"></a>
+				<img class="card-img-top" src="img/obracivil.jpg">
 				<div class="card-body">
 					<h4 class="card-title">Obra civil</h4>
 					<p class="card-text">Diseño, construcción, y elaboración de planos oficiales. Trámites de permisos y registros ante el IMSS.</p>
@@ -285,7 +280,7 @@
 		</div>
 		<div class="col-md-3">
 			<div class="card">
-				<a href="#"><img class="card-img-top" src="img/maquinaria.jpg"></a>
+				<img class="card-img-top" src="img/maquinaria.jpg">
 				<div class="card-body">
 					<h5 class="card-title">Instalación de Maquinaria</h5>
 					<p class="card-text"> Montaje, armado, alineación y nivelación, conexión eléctrica, agua de enfriamento, ductos y campana para extracción, etc. </p>
@@ -363,7 +358,7 @@ Connect
 
 <!--Clientes-->
 
-<div id="clientes" class="contador parallax">
+<div id="clientes">
  </div>
 
 <div class="row titles text-center">
@@ -390,9 +385,9 @@ Connect
 
 
 <!--- Footer -->
-<footer>
+<footer id="contacto">
 
-<div id="contacto">
+<div >
     <div class="container-fluid">
 		<div class="row titles text-center">
 			<div class="col-12 titulos">
@@ -484,6 +479,137 @@ Connect
   <script src="js/jquery.lettering.js"></script>
   <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>
   <script src="js/main.js"></script>
+
+<!--<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+  	
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>-->
+
+
+
+
+<script type="text/javascript">
+	$(function() {
+  $('a.page-scroll').bind('click', function(event) {
+    event.preventDefault();
+    var $anchor = $(this);
+    $('html,body').css(
+     "overflow-x", "visible"
+    );
+    $('html,body').stop().animate({
+      scrollTop: $($anchor.attr('href')).offset().top
+    }, 1500, 'easeInOutExpo');
+    $('html,body').css(
+      "overflow-x", "hidden"
+    );
+  });
+});
+</script>
+
+
+<!--<script type="text/javascript">
+	const list = document.getElementsByClassName('menu-list')[0];
+
+// easing functions http://goo.gl/5HLl8
+Math.easeInOutQuad = function(t, b, c, d) {
+  t /= d / 2;
+  if (t < 1) {
+    return c / 2 * t * t + b
+  }
+  t--;
+  return -c / 2 * (t * (t - 2) - 1) + b;
+};
+
+Math.easeInCubic = function(t, b, c, d) {
+  var tc = (t /= d) * t * t;
+  return b + c * (tc);
+};
+
+Math.inOutQuintic = function(t, b, c, d) {
+  var ts = (t /= d) * t,
+    tc = ts * t;
+  return b + c * (6 * tc * ts + -15 * ts * ts + 10 * tc);
+};
+
+// requestAnimationFrame for Smart Animating http://goo.gl/sx5sts
+var requestAnimFrame = (function() {
+  return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function(callback) {
+    window.setTimeout(callback, 1000 / 60);
+  };
+})();
+
+function scrollTo(to, callback, duration) {
+  // because it's so fucking difficult to detect the scrolling element, just move them all
+  function move(amount) {
+    document.documentElement.scrollTop = amount;
+    document.body.parentNode.scrollTop = amount;
+    document.body.scrollTop = amount;
+  }
+
+  function position() {
+    return document.documentElement.scrollTop || document.body.parentNode.scrollTop || document.body.scrollTop;
+  }
+  var start = position(),
+    change = to - start,
+    currentTime = 0,
+    increment = 20;
+  duration = (typeof(duration) === 'undefined') ? 500 : duration;
+  var animateScroll = function() {
+    // increment the time
+    currentTime += increment;
+    // find the value with the quadratic in-out easing function
+    var val = Math.easeInOutQuad(currentTime, start, change, duration);
+    // move the document.body
+    move(val);
+    // do the animation unless its over
+    if (currentTime < duration) {
+      requestAnimFrame(animateScroll);
+    } else {
+      if (callback && typeof(callback) === 'function') {
+        // the animation is done so lets callback
+        callback();
+      }
+    }
+  };
+  animateScroll();
+}
+
+list.addEventListener('click', e => {
+  const {
+    target
+  } = e;
+  const to = target.getAttribute('data-target');
+  const element = document.getElementById(to);
+  const bodyRect = document.body.getBoundingClientRect();
+  const elemRect = element.getBoundingClientRect();
+  const offset = elemRect.top - bodyRect.top;
+  scrollTo(offset, null, 300);
+});
+
+</script>-->
+
 
 </body>
 </html>
