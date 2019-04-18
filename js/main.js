@@ -1,5 +1,5 @@
 
-/*
+
 $(function() {
     
     // $('body').niceScroll({
@@ -23,7 +23,7 @@ $(function() {
             $('body').css({'margin-top': '0px'});
         }
     });
-    */
+
     // Menu movil
     $('.menu-movil').on('click', function() {
         $('.navegacion-principal').slideToggle();
@@ -41,7 +41,7 @@ $(function() {
 
     // Allows the page to be automatically scrolled to the appropriate section when the user clicks
     // the corresponding button in the navigation bar.
- /*   $('nav.navegacion-principal > a').on('click', function(event) {
+    $('nav.navegacion-principal > a').on('click', function(event) {
         event.preventDefault();
         if (window.mobilecheck()) {
             $('.navegacion-principal').slideToggle();
@@ -59,7 +59,7 @@ $(function() {
         }
     });
 
-});*/
+})
 
 
 // Tracks the action of resizing the window/browser, so as to disable the style attribute in HTML
