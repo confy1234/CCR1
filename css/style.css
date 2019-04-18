@@ -4,7 +4,7 @@
  Fixed Image
  ========================================================================== */
 
-
+*{box-sizing: border-box}
 
 .parallax::before {
     width: 100%;
@@ -70,14 +70,15 @@ video {
 }
 
 body {
-  overflow-x:hidden;
+  overflow-x:hidden !important;
   margin:0;
 }
 
 html{
-  overflow-x: hidden;
+   /* overflow-x: hidden !important;*/
    scroll-behavior: smooth;
 }
+
 
 /* ==========================================================================
  Remove defalut fieldset styles
@@ -609,7 +610,7 @@ div.contactfix{
 }
 
 
-  body,html {
+  body {
     overflow-x:hidden !important;
   }
 
