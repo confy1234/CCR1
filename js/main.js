@@ -32,7 +32,7 @@ $(function() {
 
     // Mail to option
     $('.form-usuario a').on('click', function() {
-        var link = "mailto:panchobirotes1@gmail.com"
+        var link = "mailto:brendaorb97@gmail.com"
              + "?subject=" + escape($('div.informacion-usuario input')[0].value + " " + $('div.informacion-usuario input')[1].value)
              + "&body=" + escape($('div.mensaje-usuario textarea')[0].value)
         window.location.href = link;
