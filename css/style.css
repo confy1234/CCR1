@@ -81,6 +81,8 @@ html{
    /* overflow-x: hidden !important;*/
    scroll-behavior: smooth;
    -webkit-overflow-scrolling: touch;
+   overflow-x: auto;
+   min-width: 400px;
 }
 
 div.hiddenvideo {
@@ -493,15 +495,16 @@ div.contactfix{
  Media Queries
  ========================================================================== */
 
-@media (max-width:1900px){
+/*@media (max-width:1900px){
   html{
     overflow-x: auto;
   }
-}
 
+}*/
 
 
 @media (max-width: 1024px) {
+
 
 .carousel-caption{
     top: 50%;
@@ -520,6 +523,7 @@ html{
 
 @media (max-width: 992px) {
 
+
 .carousel-caption{
     top: 50%;
   }
@@ -533,18 +537,23 @@ html{
   }
 
 }
+
 @media (max-width: 768px) {
   
-
+  .card {
+    pointer-events: none !important;
+  }
+  
   .navbar-nav li {
-  padding-right: 0px;
-  border-color: #FFF;
-}
+    padding-right: 0px;
+    border-color: #FFF;
+  }
 
-.nav-link{
-  font-size: .9rem !important;
-  font-style: bold;
-}
+  .nav-link{
+    font-size: .9rem !important;
+    font-style: bold;
+  }
+
 
   .carousel-caption .btn{
     font-size: 95%; 
@@ -570,11 +579,17 @@ html{
       max-width: 100%; 
   }
 
-   .carousel-inner img{
+ /* .carousel-inner img{
     position: ;
     width: 50%;
     transform: translateY(100%) !important; 
     
+  }*/
+
+   .carousel-inner img{
+    position: relative;
+    width: 100%;
+    margin-top: 5.7rem;
   }
 
   div.logo img {
@@ -591,6 +606,10 @@ html{
 
 }
 @media (max-width: 576px) {
+  
+  .card {
+    pointer-events: none !important;
+  }
   
 
   html{
@@ -641,7 +660,6 @@ html{
 
 
   .carousel-inner img {
-    display: none !important;
     position: relative;
     width: 50%; 
     height: 20%;
